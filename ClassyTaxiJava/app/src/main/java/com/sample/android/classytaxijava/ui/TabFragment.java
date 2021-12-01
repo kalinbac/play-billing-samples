@@ -46,9 +46,9 @@ public class TabFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstancedState) {
-        BillingViewModel billingViewModel = ViewModelProviders.of(requireActivity()).get(BillingViewModel.class);
+        BillingViewModel billingViewModel = new ViewModelProvider(requireActivity()).get(BillingViewModel.class);
         SubscriptionStatusViewModel subscriptionViewModel =
-                ViewModelProviders.of(requireActivity()).get(SubscriptionStatusViewModel.class);
+                new ViewModelProvider(requireActivity()).get(SubscriptionStatusViewModel.class);
 
         int section = getArguments().getInt(ARG_SECTION_NUMBER);
 
